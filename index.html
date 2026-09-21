@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>حور — فرقة حور الفنية</title>
+  <title>منصة حور — فرقة حور الفنية</title>
   <style>
     * {
       margin: 0;
@@ -27,19 +27,20 @@
       background: rgba(212, 160, 23, 0.9);
       color: #3D4F1F;
       border: 2px solid #D4A017;
-      padding: 10px 20px;
+      padding: 10px 22px;
       border-radius: 25px;
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s ease;
       font-family: inherit;
+      z-index: 10;
     }
 
     .lang-btn:hover {
       background: #D4A017;
       color: #FAF8F3;
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
 
     /* ===== الهيدر ===== */
@@ -86,7 +87,7 @@
       padding-right: 18px;
     }
 
-    /* لما تكون اللغة إنجليزية، الحدود تنقلب */
+    /* باللغة الإنجليزية — الحدود تنقلب */
     html[dir="ltr"] section h2 {
       border-right: none;
       border-left: 6px solid #D4A017;
@@ -202,7 +203,7 @@
   
   <header>
     <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
-    <img src="logo.png" alt="شعار فرقة حور الفنية">
+    <img src="logo.png" alt="شعار فرقة حور الفنية" id="logoImg">
     <h1 id="title">منصة حور</h1>
     <p id="subtitle">كاتبة | مخرجة | مدربة | مؤسسة ومديرة فرقة حور الفنية</p>
   </header>
@@ -261,13 +262,15 @@
   </section>
 
   <footer>
-    <p id="footerText">© 2026 حور — سندس جهاد | جميع الحقوق محفوظة</p>
+    <p id="footerText">© 2026 منصة حور — سندس جهاد | جميع الحقوق محفوظة</p>
   </footer>
 
   <script>
     // ===== الترجمات =====
     const translations = {
       ar: {
+        pageTitle: 'منصة حور — فرقة حور الفنية',
+        logoAlt: 'شعار فرقة حور الفنية',
         title: 'منصة حور',
         subtitle: 'كاتبة | مخرجة | مدربة | مؤسسة ومديرة فرقة حور الفنية',
         aboutTitle: 'من أنا',
@@ -286,9 +289,11 @@
         labelLinked: 'لينكد إن',
         labelInsta: 'انستغرام',
         labelTikTok: 'تيك توك',
-        footerText: '© 2026 حور — سندس جهاد | جميع الحقوق محفوظة'
+        footerText: '© 2026 منصة حور — سندس جهاد | جميع الحقوق محفوظة'
       },
       en: {
+        pageTitle: 'Hoor Platform — Hoor Art Troupe',
+        logoAlt: 'Hoor Art Troupe Logo',
         title: 'Hoor Platform',
         subtitle: 'Writer | Director | Trainer | Founder & Director of Hoor Art Troupe',
         aboutTitle: 'About Me',
@@ -307,42 +312,52 @@
         labelLinked: 'LinkedIn',
         labelInsta: 'Instagram',
         labelTikTok: 'TikTok',
-        footerText: '© 2026 Hoor — Sondos Jehad | All Rights Reserved'
+        footerText: '© 2026 Hoor Platform — Sondos Jehad | All Rights Reserved'
       }
     };
 
     let currentLang = 'ar';
 
     function toggleLang() {
+      // تبديل اللغة
       currentLang = currentLang === 'ar' ? 'en' : 'ar';
       const t = translations[currentLang];
 
-      // تغيير الاتجاه واللغة
+      // تغيير اللغة والاتجاه
       document.documentElement.lang = currentLang;
       document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
-      // تحديث النصوص
+      // عنوان الصفحة
+      document.title = t.pageTitle;
+
+      // الشعار
+      document.getElementById('logoImg').alt = t.logoAlt;
+
+      // النصوص الرئيسية
       document.getElementById('title').textContent = t.title;
       document.getElementById('subtitle').textContent = t.subtitle;
       document.getElementById('aboutTitle').textContent = t.aboutTitle;
       document.getElementById('aboutText').textContent = t.aboutText;
       document.getElementById('servicesTitle').textContent = t.servicesTitle;
 
-      // تحديث قائمة الخدمات
+      // قائمة الخدمات
       const servicesItems = document.querySelectorAll('#servicesList li');
       servicesItems.forEach((li, index) => {
         li.textContent = t.services[index];
       });
 
+      // قسم التواصل
       document.getElementById('contactTitle').textContent = t.contactTitle;
       document.getElementById('labelEmail').textContent = t.labelEmail;
       document.getElementById('labelWhats').textContent = t.labelWhats;
       document.getElementById('labelLinked').textContent = t.labelLinked;
       document.getElementById('labelInsta').textContent = t.labelInsta;
       document.getElementById('labelTikTok').textContent = t.labelTikTok;
+
+      // الفوتر
       document.getElementById('footerText').textContent = t.footerText;
 
-      // تغيير نص الزر
+      // نص الزر
       document.getElementById('langBtn').textContent = currentLang === 'ar' ? 'EN' : 'عربي';
     }
   </script>

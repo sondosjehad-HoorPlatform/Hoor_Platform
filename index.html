@@ -16,6 +16,30 @@
       background: #FAF8F3;
       color: #2c2c2c;
       line-height: 1.8;
+      transition: all 0.3s ease;
+    }
+
+    /* ===== زر الترجمة ===== */
+    .lang-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(212, 160, 23, 0.9);
+      color: #3D4F1F;
+      border: 2px solid #D4A017;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .lang-btn:hover {
+      background: #D4A017;
+      color: #FAF8F3;
+      transform: scale(1.05);
     }
 
     /* ===== الهيدر ===== */
@@ -24,6 +48,7 @@
       padding: 60px 20px;
       text-align: center;
       color: #FAF8F3;
+      position: relative;
     }
 
     header img {
@@ -61,6 +86,14 @@
       padding-right: 18px;
     }
 
+    /* لما تكون اللغة إنجليزية، الحدود تنقلب */
+    html[dir="ltr"] section h2 {
+      border-right: none;
+      border-left: 6px solid #D4A017;
+      padding-right: 0;
+      padding-left: 18px;
+    }
+
     section p {
       font-size: 1.15rem;
       color: #444;
@@ -84,6 +117,11 @@
       font-size: 1.1rem;
       color: #3D4F1F;
       font-weight: 500;
+    }
+
+    html[dir="ltr"] li {
+      border-right: none;
+      border-left: 4px solid #556B2F;
     }
 
     li:hover {
@@ -163,19 +201,20 @@
 <body>
   
   <header>
+    <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
     <img src="logo.png" alt="شعار فرقة حور الفنية">
-    <h1>حور</h1>
-    <p>كاتبة | مخرجة | مدربة | مؤسسة ومديرة فرقة حور الفنية</p>
+    <h1 id="title">منصة حور</h1>
+    <p id="subtitle">كاتبة | مخرجة | مدربة | مؤسسة ومديرة فرقة حور الفنية</p>
   </header>
 
   <section>
-    <h2>من أنا</h2>
-    <p>ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، مستشارة في التدريب، ومديرة ومؤسسة فرقة حور الفنية في غزة.</p>
+    <h2 id="aboutTitle">من أنا</h2>
+    <p id="aboutText">ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، مستشارة في التدريب، ومديرة ومؤسسة فرقة حور الفنية في غزة.</p>
   </section>
 
   <section>
-    <h2>خدماتي</h2>
-    <ul>
+    <h2 id="servicesTitle">خدماتي</h2>
+    <ul id="servicesList">
       <li>🎭 ورشات مسرحية وتمثيل</li>
       <li>🎤 تدريب إلقاء وخطابة</li>
       <li>🎓 تدريب TOT (تدريب المدربين)</li>
@@ -185,36 +224,36 @@
   </section>
 
   <section id="contact">
-    <h2>تواصل معي</h2>
+    <h2 id="contactTitle">تواصل معي</h2>
     <div class="contact-grid">
       
       <a href="mailto:sondosjehad@gmail.com" class="contact-card">
         <span class="icon">📧</span>
-        <span class="label">الإيميل</span>
+        <span class="label" id="labelEmail">الإيميل</span>
         <span class="value">sondosjehad@gmail.com</span>
       </a>
 
       <a href="https://wa.me/972568355884" target="_blank" class="contact-card">
         <span class="icon">💬</span>
-        <span class="label">واتساب</span>
+        <span class="label" id="labelWhats">واتساب</span>
         <span class="value">+972 56 835 5884</span>
       </a>
 
       <a href="https://www.linkedin.com/in/sondos-jehad-975066193/" target="_blank" class="contact-card">
         <span class="icon">💼</span>
-        <span class="label">لينكد إن</span>
+        <span class="label" id="labelLinked">لينكد إن</span>
         <span class="value">Sondos Jehad</span>
       </a>
 
       <a href="https://www.instagram.com/hoor_artistic_team" target="_blank" class="contact-card">
         <span class="icon">📸</span>
-        <span class="label">انستغرام</span>
+        <span class="label" id="labelInsta">انستغرام</span>
         <span class="value">@hoor_artistic_team</span>
       </a>
 
       <a href="https://www.tiktok.com/@hoor.artistic.tea1" target="_blank" class="contact-card">
         <span class="icon">🎵</span>
-        <span class="label">تيك توك</span>
+        <span class="label" id="labelTikTok">تيك توك</span>
         <span class="value">@hoor.artistic.tea1</span>
       </a>
 
@@ -222,8 +261,91 @@
   </section>
 
   <footer>
-    <p>© 2026 حور — سندس جهاد | جميع الحقوق محفوظة</p>
+    <p id="footerText">© 2026 حور — سندس جهاد | جميع الحقوق محفوظة</p>
   </footer>
+
+  <script>
+    // ===== الترجمات =====
+    const translations = {
+      ar: {
+        title: 'منصة حور',
+        subtitle: 'كاتبة | مخرجة | مدربة | مؤسسة ومديرة فرقة حور الفنية',
+        aboutTitle: 'من أنا',
+        aboutText: 'ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، مستشارة في التدريب، ومديرة ومؤسسة فرقة حور الفنية في غزة.',
+        servicesTitle: 'خدماتي',
+        services: [
+          '🎭 ورشات مسرحية وتمثيل',
+          '🎤 تدريب إلقاء وخطابة',
+          '🎓 تدريب TOT (تدريب المدربين)',
+          '🧠 تنمية بشرية ومهارات حياتية',
+          '🎪 إدارة الفرق الفنية والعروض'
+        ],
+        contactTitle: 'تواصل معي',
+        labelEmail: 'الإيميل',
+        labelWhats: 'واتساب',
+        labelLinked: 'لينكد إن',
+        labelInsta: 'انستغرام',
+        labelTikTok: 'تيك توك',
+        footerText: '© 2026 حور — سندس جهاد | جميع الحقوق محفوظة'
+      },
+      en: {
+        title: 'Hoor',
+        subtitle: 'Writer | Director | Trainer | Founder & Director of Hoor Art Troupe',
+        aboutTitle: 'About Me',
+        aboutText: 'Theatre, singing, and public speaking facilitator. TOT and human development trainer. Training consultant, and founder & director of Hoor Art Troupe in Gaza.',
+        servicesTitle: 'My Services',
+        services: [
+          '🎭 Theatre & Acting Workshops',
+          '🎤 Public Speaking & Elocution Training',
+          '🎓 TOT (Training of Trainers)',
+          '🧠 Human Development & Life Skills',
+          '🎪 Art Troupe & Performance Management'
+        ],
+        contactTitle: 'Contact Me',
+        labelEmail: 'Email',
+        labelWhats: 'WhatsApp',
+        labelLinked: 'LinkedIn',
+        labelInsta: 'Instagram',
+        labelTikTok: 'TikTok',
+        footerText: '© 2026 Hoor — Sondos Jehad | All Rights Reserved'
+      }
+    };
+
+    let currentLang = 'ar';
+
+    function toggleLang() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      const t = translations[currentLang];
+
+      // تغيير الاتجاه واللغة
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+      // تحديث النصوص
+      document.getElementById('title').textContent = t.title;
+      document.getElementById('subtitle').textContent = t.subtitle;
+      document.getElementById('aboutTitle').textContent = t.aboutTitle;
+      document.getElementById('aboutText').textContent = t.aboutText;
+      document.getElementById('servicesTitle').textContent = t.servicesTitle;
+
+      // تحديث قائمة الخدمات
+      const servicesItems = document.querySelectorAll('#servicesList li');
+      servicesItems.forEach((li, index) => {
+        li.textContent = t.services[index];
+      });
+
+      document.getElementById('contactTitle').textContent = t.contactTitle;
+      document.getElementById('labelEmail').textContent = t.labelEmail;
+      document.getElementById('labelWhats').textContent = t.labelWhats;
+      document.getElementById('labelLinked').textContent = t.labelLinked;
+      document.getElementById('labelInsta').textContent = t.labelInsta;
+      document.getElementById('labelTikTok').textContent = t.labelTikTok;
+      document.getElementById('footerText').textContent = t.footerText;
+
+      // تغيير نص الزر
+      document.getElementById('langBtn').textContent = currentLang === 'ar' ? 'EN' : 'عربي';
+    }
+  </script>
 
 </body>
 </html>

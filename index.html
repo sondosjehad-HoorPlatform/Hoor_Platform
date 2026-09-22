@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>منصة حور — فرقة حور الفنية</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -69,18 +69,14 @@
       transition: transform 0.4s ease;
     }
 
-    header img:hover {
-      transform: scale(1.04);
-    }
+    header img:hover { transform: scale(1.04); }
 
     header h1 {
-      font-family: 'Tajawal', 'Segoe UI', sans-serif;
       font-size: 4.5rem;
       font-weight: 900;
       color: #3D4F1F;
       margin-bottom: 18px;
       letter-spacing: -1px;
-      position: relative;
       display: inline-block;
     }
 
@@ -93,8 +89,7 @@
       margin-top: 15px;
     }
 
-    header .tagline {
-      font-family: 'Tajawal', sans-serif;
+    .tagline {
       font-size: 1.4rem;
       font-weight: 500;
       color: #B8860B;
@@ -103,8 +98,7 @@
       font-style: italic;
     }
 
-    header .roles {
-      font-family: 'Tajawal', sans-serif;
+    .roles {
       font-size: 1.1rem;
       color: #666;
       font-weight: 400;
@@ -113,13 +107,13 @@
       line-height: 1.8;
     }
 
-    header .roles .name {
+    .roles .name {
       color: #3D4F1F;
       font-weight: 700;
       font-size: 1.2rem;
     }
 
-    header .roles .divider {
+    .roles .divider {
       color: #D4A017;
       margin: 0 8px;
       font-weight: 700;
@@ -133,7 +127,6 @@
     }
 
     section h2 {
-      font-family: 'Tajawal', sans-serif;
       font-size: 2.3rem;
       font-weight: 900;
       color: #3D4F1F;
@@ -227,9 +220,7 @@
       transition: opacity 0.3s ease;
     }
 
-    .workshop-card:hover::before {
-      opacity: 1;
-    }
+    .workshop-card:hover::before { opacity: 1; }
 
     html[dir="ltr"] .workshop-card {
       border-right: 1px solid #EFE6D0;
@@ -242,7 +233,6 @@
     }
 
     .workshop-title {
-      font-family: 'Tajawal', sans-serif;
       font-size: 1.7rem;
       color: #3D4F1F;
       margin-bottom: 18px;
@@ -325,10 +315,7 @@
       background: #FFFDF8;
     }
 
-    .contact-card .icon {
-      font-size: 2.6rem;
-      margin-bottom: 12px;
-    }
+    .contact-card .icon { font-size: 2.6rem; margin-bottom: 12px; }
 
     .contact-card .label {
       font-size: 1.1rem;
@@ -371,10 +358,9 @@
       font-weight: 500;
     }
 
-    /* ===== للشاشات الصغيرة ===== */
     @media (max-width: 600px) {
       header h1 { font-size: 3rem; }
-      header .tagline { font-size: 1.1rem; }
+      .tagline { font-size: 1.1rem; }
       section h2 { font-size: 1.8rem; }
       .lang-btn { top: 15px; left: 15px; padding: 8px 18px; font-size: 0.85rem; }
     }
@@ -416,58 +402,58 @@
     <h2 id="workshopsTitle">الورشات والتدريبات</h2>
 
     <div class="workshop-card">
-      <div class="workshop-title">🎭 ورشة المسرح التفاعلي</div>
-      <p class="workshop-desc">ورشة عملية لتعلّم أساسيات التمثيل، الأداء على خشبة المسرح، والثقة بالنفس. تشمل تمارين تفاعلية، لعب أدوار، وبناء شخصيات مسرحية.</p>
+      <div class="workshop-title" data-wt="1">🎭 ورشة المسرح التفاعلي</div>
+      <p class="workshop-desc" data-wd="1">ورشة عملية لتعلّم أساسيات التمثيل، الأداء على خشبة المسرح، والثقة بالنفس. تشمل تمارين تفاعلية، لعب أدوار، وبناء شخصيات مسرحية.</p>
       <div class="workshop-info">
-        <span class="info-tag">⏱️ 8 جلسات × ساعتين</span>
-        <span class="info-tag">👥 للمبتدئين والمتقدمين</span>
-        <span class="info-tag">🎯 أطفال (10+)، صبايا، شباب</span>
+        <span class="info-tag" data-wi="1a">⏱️ 8 جلسات × ساعتين</span>
+        <span class="info-tag" data-wi="1b">👥 للمبتدئين والمتقدمين</span>
+        <span class="info-tag" data-wi="1c">🎯 أطفال (10+)، صبايا، شباب</span>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn">📝 سجلي الآن</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn" data-btn>📝 سجلي الآن</a>
     </div>
 
     <div class="workshop-card">
-      <div class="workshop-title">🎤 ورشة الإلقاء والخطابة</div>
-      <p class="workshop-desc">تدريب شامل على مهارات الإلقاء أمام الجمهور، التحكم بالصوت، لغة الجسد، والثقة بالنفس. مناسبة للمتحدثين المبتدئين.</p>
+      <div class="workshop-title" data-wt="2">🎤 ورشة الإلقاء والخطابة</div>
+      <p class="workshop-desc" data-wd="2">تدريب شامل على مهارات الإلقاء أمام الجمهور، التحكم بالصوت، لغة الجسد، والثقة بالنفس. مناسبة للمتحدثين المبتدئين.</p>
       <div class="workshop-info">
-        <span class="info-tag">⏱️ 6 جلسات × ساعتين</span>
-        <span class="info-tag">👥 للمبتدئين</span>
-        <span class="info-tag">🎯 صبايا، شباب (14+)</span>
+        <span class="info-tag" data-wi="2a">⏱️ 6 جلسات × ساعتين</span>
+        <span class="info-tag" data-wi="2b">👥 للمبتدئين</span>
+        <span class="info-tag" data-wi="2c">🎯 صبايا، شباب (14+)</span>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn">📝 سجلي الآن</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn" data-btn>📝 سجلي الآن</a>
     </div>
 
     <div class="workshop-card">
-      <div class="workshop-title">🎓 تدريب المدربين (TOT)</div>
-      <p class="workshop-desc">برنامج شامل لتأهيل المدربين المحترفين بمنهجيات تدريب حديثة، أدوات عملية، ومهارات التيسير. يشمل شهادة معتمدة.</p>
+      <div class="workshop-title" data-wt="3">🎓 تدريب المدربين (TOT)</div>
+      <p class="workshop-desc" data-wd="3">برنامج شامل لتأهيل المدربين المحترفين بمنهجيات تدريب حديثة، أدوات عملية، ومهارات التيسير. يشمل شهادة معتمدة.</p>
       <div class="workshop-info">
-        <span class="info-tag">⏱️ 30 ساعة تدريبية</span>
-        <span class="info-tag">👥 متقدم</span>
-        <span class="info-tag">🎯 شباب، كبار (18+)</span>
+        <span class="info-tag" data-wi="3a">⏱️ 30 ساعة تدريبية</span>
+        <span class="info-tag" data-wi="3b">👥 متقدم</span>
+        <span class="info-tag" data-wi="3c">🎯 شباب، كبار (18+)</span>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn">📝 سجلي الآن</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn" data-btn>📝 سجلي الآن</a>
     </div>
 
     <div class="workshop-card">
-      <div class="workshop-title">🧠 ورشة التنمية البشرية</div>
-      <p class="workshop-desc">ورشات عملية في التواصل الفعال، إدارة الوقت، الثقة بالنفس، والعمل الجماعي. تهدف لتمكين المشاركين بحياتهم الشخصية والمهنية.</p>
+      <div class="workshop-title" data-wt="4">🧠 ورشة التنمية البشرية</div>
+      <p class="workshop-desc" data-wd="4">ورشات عملية في التواصل الفعال، إدارة الوقت، الثقة بالنفس، والعمل الجماعي. تهدف لتمكين المشاركين بحياتهم الشخصية والمهنية.</p>
       <div class="workshop-info">
-        <span class="info-tag">⏱️ 4 جلسات × ساعتين</span>
-        <span class="info-tag">👥 للجميع</span>
-        <span class="info-tag">🎯 صبايا، شباب (12+)</span>
+        <span class="info-tag" data-wi="4a">⏱️ 4 جلسات × ساعتين</span>
+        <span class="info-tag" data-wi="4b">👥 للجميع</span>
+        <span class="info-tag" data-wi="4c">🎯 صبايا، شباب (12+)</span>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn">📝 سجلي الآن</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn" data-btn>📝 سجلي الآن</a>
     </div>
 
     <div class="workshop-card">
-      <div class="workshop-title">🎪 ورشة إدارة الفرق الفنية</div>
-      <p class="workshop-desc">تدريب على إدارة الفرق الفنية، تنظيم العروض، بناء الفريق، والتخطيط الإبداعي. مناسبة للقائدات والمسؤولين الفنيين.</p>
+      <div class="workshop-title" data-wt="5">🎪 ورشة إدارة الفرق الفنية</div>
+      <p class="workshop-desc" data-wd="5">تدريب على إدارة الفرق الفنية، تنظيم العروض، بناء الفريق، والتخطيط الإبداعي. مناسبة للقائدات والمسؤولين الفنيين.</p>
       <div class="workshop-info">
-        <span class="info-tag">⏱️ 5 جلسات × ساعتين</span>
-        <span class="info-tag">👥 متوسط إلى متقدم</span>
-        <span class="info-tag">🎯 شباب، كبار (16+)</span>
+        <span class="info-tag" data-wi="5a">⏱️ 5 جلسات × ساعتين</span>
+        <span class="info-tag" data-wi="5b">👥 متوسط إلى متقدم</span>
+        <span class="info-tag" data-wi="5c">🎯 شباب، كبار (16+)</span>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn">📝 سجلي الآن</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9LsvFF1Tc-S9dsyh8AWiuldQeDx_A68AghJnmpak-rDU6cw/viewform" target="_blank" class="register-btn" data-btn>📝 سجلي الآن</a>
     </div>
 
   </section>
@@ -523,7 +509,14 @@
         register: '📝 سجلي الآن',
         contactTitle: 'تواصل معي',
         labelEmail: 'الإيميل', labelWhats: 'واتساب', labelLinked: 'لينكد إن', labelInsta: 'انستغرام', labelTikTok: 'تيك توك',
-        footerText: '© 2026 منصة حور — سندس جهاد | جميع الحقوق محفوظة'
+        footerText: '© 2026 منصة حور — سندس جهاد | جميع الحقوق محفوظة',
+        workshops: [
+          { title: '🎭 ورشة المسرح التفاعلي', desc: 'ورشة عملية لتعلّم أساسيات التمثيل، الأداء على خشبة المسرح، والثقة بالنفس. تشمل تمارين تفاعلية، لعب أدوار، وبناء شخصيات مسرحية.', info: ['⏱️ 8 جلسات × ساعتين','👥 للمبتدئين والمتقدمين','🎯 أطفال (10+)، صبايا، شباب'] },
+          { title: '🎤 ورشة الإلقاء والخطابة', desc: 'تدريب شامل على مهارات الإلقاء أمام الجمهور، التحكم بالصوت، لغة الجسد، والثقة بالنفس. مناسبة للمتحدثين المبتدئين.', info: ['⏱️ 6 جلسات × ساعتين','👥 للمبتدئين','🎯 صبايا، شباب (14+)'] },
+          { title: '🎓 تدريب المدربين (TOT)', desc: 'برنامج شامل لتأهيل المدربين المحترفين بمنهجيات تدريب حديثة، أدوات عملية، ومهارات التيسير. يشمل شهادة معتمدة.', info: ['⏱️ 30 ساعة تدريبية','👥 متقدم','🎯 شباب، كبار (18+)'] },
+          { title: '🧠 ورشة التنمية البشرية', desc: 'ورشات عملية في التواصل الفعال، إدارة الوقت، الثقة بالنفس، والعمل الجماعي. تهدف لتمكين المشاركين بحياتهم الشخصية والمهنية.', info: ['⏱️ 4 جلسات × ساعتين','👥 للجميع','🎯 صبايا، شباب (12+)'] },
+          { title: '🎪 ورشة إدارة الفرق الفنية', desc: 'تدريب على إدارة الفرق الفنية، تنظيم العروض، بناء الفريق، والتخطيط الإبداعي. مناسبة للقائدات والمسؤولين الفنيين.', info: ['⏱️ 5 جلسات × ساعتين','👥 متوسط إلى متقدم','🎯 شباب، كبار (16+)'] }
+        ]
       },
       en: {
         pageTitle: 'Hoor Platform — Hoor Art Troupe',
@@ -539,7 +532,14 @@
         register: '📝 Register Now',
         contactTitle: 'Contact Me',
         labelEmail: 'Email', labelWhats: 'WhatsApp', labelLinked: 'LinkedIn', labelInsta: 'Instagram', labelTikTok: 'TikTok',
-        footerText: '© 2026 Hoor Platform — Sondos Jehad | All Rights Reserved'
+        footerText: '© 2026 Hoor Platform — Sondos Jehad | All Rights Reserved',
+        workshops: [
+          { title: '🎭 Interactive Theatre Workshop', desc: 'A practical workshop to learn acting basics, stage performance, and self-confidence. Includes interactive exercises, role-playing, and building theatrical characters.', info: ['⏱️ 8 sessions × 2 hours','👥 Beginners & Advanced','🎯 Children (10+), Youth, Teens'] },
+          { title: '🎤 Public Speaking & Elocution', desc: 'Comprehensive training on public speaking skills, voice control, body language, and self-confidence. Suitable for beginner speakers.', info: ['⏱️ 6 sessions × 2 hours','👥 Beginners','🎯 Youth (14+)'] },
+          { title: '🎓 Training of Trainers (TOT)', desc: 'A comprehensive program to qualify professional trainers with modern training methodologies, practical tools, and facilitation skills. Includes certificate.', info: ['⏱️ 30 training hours','👥 Advanced','🎯 Adults (18+)'] },
+          { title: '🧠 Human Development Workshop', desc: 'Practical workshops on effective communication, time management, self-confidence, and teamwork. Aims to empower participants personally and professionally.', info: ['⏱️ 4 sessions × 2 hours','👥 All levels','🎯 Youth (12+)'] },
+          { title: '🎪 Art Troupe Management', desc: 'Training on managing art troupes, organizing performances, team building, and creative planning. Suitable for leaders and art managers.', info: ['⏱️ 5 sessions × 2 hours','👥 Intermediate to Advanced','🎯 Youth (16+)'] }
+        ]
       }
     };
 
@@ -548,8 +548,10 @@
     function toggleLang() {
       currentLang = currentLang === 'ar' ? 'en' : 'ar';
       const t = translations[currentLang];
+
       document.documentElement.lang = currentLang;
       document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
       document.title = t.pageTitle;
       document.getElementById('logoImg').alt = t.logoAlt;
       document.getElementById('title').textContent = t.title;
@@ -558,9 +560,25 @@
       document.getElementById('aboutTitle').textContent = t.aboutTitle;
       document.getElementById('aboutText').textContent = t.aboutText;
       document.getElementById('servicesTitle').textContent = t.servicesTitle;
-      document.querySelectorAll('#servicesList li').forEach((li, i) => li.textContent = t.services[i]);
+
+      document.querySelectorAll('#servicesList li').forEach((li, i) => {
+        li.textContent = t.services[i];
+      });
+
       document.getElementById('workshopsTitle').textContent = t.workshopsTitle;
-      document.querySelectorAll('.register-btn').forEach(btn => btn.textContent = t.register);
+
+      // تحديث الورشات
+      document.querySelectorAll('.workshop-card').forEach((card, i) => {
+        card.querySelector('.workshop-title').textContent = t.workshops[i].title;
+        card.querySelector('.workshop-desc').textContent = t.workshops[i].desc;
+        const tags = card.querySelectorAll('.info-tag');
+        t.workshops[i].info.forEach((info, j) => {
+          if (tags[j]) tags[j].textContent = info;
+        });
+      });
+
+      document.querySelectorAll('[data-btn]').forEach(btn => btn.textContent = t.register);
+
       document.getElementById('contactTitle').textContent = t.contactTitle;
       document.getElementById('labelEmail').textContent = t.labelEmail;
       document.getElementById('labelWhats').textContent = t.labelWhats;

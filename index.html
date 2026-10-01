@@ -251,6 +251,103 @@
       box-shadow: 0 8px 25px rgba(212, 160, 23, 0.45);
     }
 
+    /* ===== قسم الدعم ===== */
+    #support {
+      text-align: center;
+      max-width: 950px;
+      background: linear-gradient(180deg, #FFFDF8 0%, #FAF8F3 100%);
+      border-radius: 25px;
+      padding: 50px 40px;
+      border: 2px solid #EFE6D0;
+      box-shadow: 0 8px 30px rgba(212, 160, 23, 0.1);
+    }
+    #support h2 {
+      text-align: right;
+      border-bottom: none;
+    }
+    html[dir="ltr"] #support h2 {
+      text-align: left;
+    }
+    .support-intro {
+      font-size: 1.15rem;
+      color: #555;
+      line-height: 2;
+      margin-bottom: 25px;
+      text-align: right;
+    }
+    html[dir="ltr"] .support-intro { text-align: left; }
+    .support-list {
+      text-align: right;
+      margin: 25px 0;
+    }
+    html[dir="ltr"] .support-list { text-align: left; }
+    .support-list p {
+      font-size: 1.15rem;
+      color: #3D4F1F;
+      margin: 10px 0;
+      font-weight: 500;
+    }
+    .support-cta {
+      font-size: 1.2rem;
+      color: #B8860B;
+      font-weight: 700;
+      margin: 30px 0 25px;
+      font-style: italic;
+    }
+    .support-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin-top: 25px;
+    }
+    .support-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 35px;
+      border-radius: 35px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      font-family: 'Tajawal', inherit;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .support-btn.email {
+      background: linear-gradient(135deg, #3D4F1F, #556B2F);
+      color: #FFFFFF;
+    }
+    .support-btn.email:hover {
+      background: linear-gradient(135deg, #D4A017, #E8B84A);
+      color: #3D4F1F;
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 25px rgba(212, 160, 23, 0.4);
+    }
+    .support-btn.whatsapp {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #FFFFFF;
+    }
+    .support-btn.whatsapp:hover {
+      background: linear-gradient(135deg, #1EBE5D, #0E7568);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+    .support-thanks {
+      margin-top: 35px;
+      padding-top: 25px;
+      border-top: 1px dashed #D4A017;
+      font-size: 1.15rem;
+      color: #B8860B;
+      font-weight: 700;
+      font-style: italic;
+    }
+    .support-thanks .heart {
+      display: block;
+      font-size: 1.8rem;
+      margin-top: 10px;
+    }
+
     #contact { text-align: center; max-width: 1100px; }
     .contact-grid {
       display: grid;
@@ -319,6 +416,8 @@
       header h1 { font-size: 3rem; }
       .tagline { font-size: 1.1rem; }
       section h2 { font-size: 1.8rem; }
+      #support { padding: 35px 25px; }
+      .support-btn { padding: 14px 28px; font-size: 1rem; }
       .lang-btn { top: 15px; left: 15px; padding: 8px 18px; font-size: 0.85rem; }
     }
   </style>
@@ -415,6 +514,26 @@
 
   </section>
 
+  <section id="support">
+    <h2 id="supportTitle">ادعم منصة حور 🌸</h2>
+    <p class="support-intro" id="supportIntro">منصة حور مشروع ثقافي-فني مستقل، بنسعى لتقديم ورشات وتدريبات فنية مجانية لأطفال وشباب غزة.</p>
+    <div class="support-list">
+      <p id="supportItem1">🎭 استمرار الورشات المجانية</p>
+      <p id="supportItem2">🎪 دعم فرقة حور الفنية</p>
+      <p id="supportItem3">🌍 تطوير المنصة والوصول لأكبر عدد</p>
+    </div>
+    <p class="support-cta" id="supportCta">للتبرع أو الدعم، تواصل معنا مباشرة:</p>
+    <div class="support-buttons">
+      <a href="mailto:sondosjehad@gmail.com?subject=دعم منصة حور" class="support-btn email" id="supportEmailBtn">
+        📧 الإيميل
+      </a>
+      <a href="https://wa.me/972568355884?text=مرحباً، أريد دعم منصة حور" target="_blank" class="support-btn whatsapp" id="supportWaBtn">
+        💬 واتساب
+      </a>
+    </div>
+    <p class="support-thanks" id="supportThanks">كل مساهمة بتصنع ابتسامة 🙏<span class="heart">💚</span></p>
+  </section>
+
   <section id="contact">
     <h2 id="contactTitle">تواصل معي</h2>
     <div class="contact-grid">
@@ -464,6 +583,15 @@
         services: ['🎭 ورشات مسرحية وتمثيل','🎤 تدريب إلقاء وخطابة','🎓 تدريب TOT (تدريب المدربين)','🧠 تنمية بشرية ومهارات حياتية','🎪 إدارة الفرق الفنية والعروض'],
         workshopsTitle: 'الورشات والتدريبات',
         register: '📝 سجل معنا',
+        supportTitle: 'ادعم منصة حور 🌸',
+        supportIntro: 'منصة حور مشروع ثقافي-فني مستقل، بنسعى لتقديم ورشات وتدريبات فنية مجانية لأطفال وشباب غزة.',
+        supportItem1: '🎭 استمرار الورشات المجانية',
+        supportItem2: '🎪 دعم فرقة حور الفنية',
+        supportItem3: '🌍 تطوير المنصة والوصول لأكبر عدد',
+        supportCta: 'للتبرع أو الدعم، تواصل معنا مباشرة:',
+        supportEmailBtn: '📧 الإيميل',
+        supportWaBtn: '💬 واتساب',
+        supportThanks: 'كل مساهمة بتصنع ابتسامة 🙏<span class="heart">💚</span>',
         contactTitle: 'تواصل معي',
         labelEmail: 'الإيميل', labelWhats: 'واتساب', labelLinked: 'لينكد إن', labelInsta: 'انستغرام', labelTikTok: 'تيك توك',
         footerText: '© 2026 منصة حور — سندس جهاد | جميع الحقوق محفوظة',
@@ -487,6 +615,15 @@
         services: ['🎭 Theatre & Acting Workshops','🎤 Public Speaking & Elocution Training','🎓 TOT (Training of Trainers)','🧠 Human Development & Life Skills','🎪 Art Troupe & Performance Management'],
         workshopsTitle: 'Workshops & Training',
         register: '📝 Register Now',
+        supportTitle: 'Support Hoor Platform 🌸',
+        supportIntro: 'Hoor Platform is an independent cultural-artistic project, aiming to provide free artistic workshops and training for children and youth in Gaza.',
+        supportItem1: '🎭 Continuing free workshops',
+        supportItem2: '🎪 Supporting Hoor Art Troupe',
+        supportItem3: '🌍 Developing the platform & reaching more people',
+        supportCta: 'To donate or support, contact us directly:',
+        supportEmailBtn: '📧 Email',
+        supportWaBtn: '💬 WhatsApp',
+        supportThanks: 'Every contribution creates a smile 🙏<span class="heart">💚</span>',
         contactTitle: 'Contact Me',
         labelEmail: 'Email', labelWhats: 'WhatsApp', labelLinked: 'LinkedIn', labelInsta: 'Instagram', labelTikTok: 'TikTok',
         footerText: '© 2026 Hoor Platform — Sondos Jehad | All Rights Reserved',
@@ -534,6 +671,17 @@
       });
 
       document.querySelectorAll('[data-btn]').forEach(btn => btn.textContent = t.register);
+
+      // قسم الدعم
+      document.getElementById('supportTitle').textContent = t.supportTitle;
+      document.getElementById('supportIntro').textContent = t.supportIntro;
+      document.getElementById('supportItem1').textContent = t.supportItem1;
+      document.getElementById('supportItem2').textContent = t.supportItem2;
+      document.getElementById('supportItem3').textContent = t.supportItem3;
+      document.getElementById('supportCta').textContent = t.supportCta;
+      document.getElementById('supportEmailBtn').textContent = t.supportEmailBtn;
+      document.getElementById('supportWaBtn').textContent = t.supportWaBtn;
+      document.getElementById('supportThanks').innerHTML = t.supportThanks;
 
       document.getElementById('contactTitle').textContent = t.contactTitle;
       document.getElementById('labelEmail').textContent = t.labelEmail;

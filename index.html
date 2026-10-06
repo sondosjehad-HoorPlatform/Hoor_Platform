@@ -422,6 +422,7 @@
     }
   </style>
 </head>
+
 <body>
   
   <header>
@@ -440,7 +441,7 @@
 
   <section>
     <h2 id="aboutTitle">من أنا</h2>
-    <p id="aboutText">ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، ومصممة محترفة، مستشارة في التدريب، ومديرة ومؤسسة فرقة حور الفنية في غزة.</p>
+    <p id="aboutText">ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، ومصممة محترفة، مستشارة في التدريب، ومديرة ومؤسِّسة فرقة حور الفنية في غزة.</p>
   </section>
 
   <section>
@@ -586,7 +587,7 @@
     <p id="footerText">© 2026 منصة حور — سندس جهاد | جميع الحقوق محفوظة</p>
     <p class="footer-motto" id="footerMotto">فن • حب • إبداع</p>
   </footer>
-
+  
   <script>
     const translations = {
       ar: {
@@ -596,7 +597,7 @@
         tagline: 'حيث يلتقي الفن بالتدريب والإبداع',
         roles: '<span class="name">سندس جهاد</span> <span class="divider">—</span> كاتبة، مخرجة، مدربة<br>ومؤسِّسة فرقة حور الفنية',
         aboutTitle: 'من أنا',
-        aboutText: 'ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، ومصممة محترفة، مستشارة في التدريب، ومديرة ومؤسسة فرقة حور الفنية في غزة.',
+        aboutText: 'ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، ومصممة محترفة، مستشارة في التدريب، ومديرة ومؤسِّسة فرقة حور الفنية في غزة.',
         servicesTitle: 'خدماتي',
         services: ['🎭 ورشات مسرحية وتمثيل','🎤 تدريب إلقاء وخطابة','🎓 تدريب TOT (تدريب المدربين)','🧠 تنمية بشرية ومهارات حياتية','🎪 إدارة الفرق الفنية والعروض','🤖 الابتكار والذكاء الاصطناعي'],
         workshopsTitle: 'الورشات والتدريبات',
@@ -643,4 +644,79 @@
         supportCta: 'To donate or support, contact us directly:',
         supportEmailBtn: '📧 Email',
         supportWaBtn: '💬 WhatsApp',
-        supportThanks: 'Every contribution creates a smile 🙏<span
+        supportThanks: 'Every contribution creates a smile 🙏<span class="heart">💚</span>',
+        contactTitle: 'Contact Me',
+        labelEmail: 'Email', labelWhats: 'WhatsApp', labelLinked: 'LinkedIn', labelInsta: 'Instagram', labelFacebook: 'Facebook', labelTikTok: 'TikTok',
+        footerText: '© 2026 Hoor Platform — Sondos Jehad | All Rights Reserved',
+        footerMotto: 'Art • Love • Creativity',
+        workshops: [
+          { title: '🎭 Interactive Theatre Workshop', desc: 'A practical workshop to learn acting basics, stage performance, and self-confidence. Includes interactive exercises, role-playing, and building theatrical characters.', info: ['⏱️ 8 sessions × 2 hours','👥 Beginners & Advanced','🎯 Children (10+), Youth, Teens'] },
+          { title: '🎤 Public Speaking & Elocution', desc: 'Comprehensive training on public speaking skills, voice control, body language, and self-confidence. Suitable for beginner speakers.', info: ['⏱️ 6 sessions × 2 hours','👥 Beginners','🎯 Youth (14+)'] },
+          { title: '🎓 Training of Trainers (TOT)', desc: 'A comprehensive program to qualify professional trainers with modern training methodologies, practical tools, and facilitation skills. Includes certificate.', info: ['⏱️ 30 training hours','👥 Advanced','🎯 Adults (18+)'] },
+          { title: '🧠 Human Development Workshop', desc: 'Practical workshops on effective communication, time management, self-confidence, and teamwork. Aims to empower participants personally and professionally.', info: ['⏱️ 4 sessions × 2 hours','👥 All levels','🎯 Youth (12+)'] },
+          { title: '🎪 Art Troupe Management', desc: 'Training on managing art troupes, organizing performances, team building, and creative planning. Suitable for leaders and art managers.', info: ['⏱️ 5 sessions × 2 hours','👥 Intermediate to Advanced','🎯 Youth (16+)'] },
+          { title: '🤖 Innovation & AI Workshop', desc: 'A practical workshop to learn the basics of Artificial Intelligence, its modern tools, and how to use it in creativity, training, and artistic industries.', info: ['⏱️ 6 sessions × 2 hours','👥 Beginners','🎯 Youth (14+)'] }
+        ]
+      }
+    };
+
+    let currentLang = 'ar';
+
+    function toggleLang() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      const t = translations[currentLang];
+
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+      document.title = t.pageTitle;
+      document.getElementById('logoImg').alt = t.logoAlt;
+      document.getElementById('title').textContent = t.title;
+      document.getElementById('tagline').textContent = t.tagline;
+      document.getElementById('roles').innerHTML = t.roles;
+      document.getElementById('aboutTitle').textContent = t.aboutTitle;
+      document.getElementById('aboutText').textContent = t.aboutText;
+      document.getElementById('servicesTitle').textContent = t.servicesTitle;
+
+      document.querySelectorAll('#servicesList li').forEach((li, i) => {
+        li.textContent = t.services[i];
+      });
+
+      document.getElementById('workshopsTitle').textContent = t.workshopsTitle;
+
+      document.querySelectorAll('.workshop-card').forEach((card, i) => {
+        card.querySelector('.workshop-title').textContent = t.workshops[i].title;
+        card.querySelector('.workshop-desc').textContent = t.workshops[i].desc;
+        const tags = card.querySelectorAll('.info-tag');
+        t.workshops[i].info.forEach((info, j) => {
+          if (tags[j]) tags[j].textContent = info;
+        });
+      });
+
+      document.querySelectorAll('[data-btn]').forEach(btn => btn.textContent = t.register);
+
+      document.getElementById('supportTitle').textContent = t.supportTitle;
+      document.getElementById('supportIntro').textContent = t.supportIntro;
+      document.getElementById('supportItem1').textContent = t.supportItem1;
+      document.getElementById('supportItem2').textContent = t.supportItem2;
+      document.getElementById('supportItem3').textContent = t.supportItem3;
+      document.getElementById('supportCta').textContent = t.supportCta;
+      document.getElementById('supportEmailBtn').textContent = t.supportEmailBtn;
+      document.getElementById('supportWaBtn').textContent = t.supportWaBtn;
+      document.getElementById('supportThanks').innerHTML = t.supportThanks;
+
+      document.getElementById('contactTitle').textContent = t.contactTitle;
+      document.getElementById('labelEmail').textContent = t.labelEmail;
+      document.getElementById('labelWhats').textContent = t.labelWhats;
+      document.getElementById('labelLinked').textContent = t.labelLinked;
+      document.getElementById('labelInsta').textContent = t.labelInsta;
+      document.getElementById('labelFacebook').textContent = t.labelFacebook;
+      document.getElementById('labelTikTok').textContent = t.labelTikTok;
+      document.getElementById('footerText').textContent = t.footerText;
+      document.getElementById('footerMotto').textContent = t.footerMotto;
+      document.getElementById('langBtn').textContent = currentLang === 'ar' ? 'EN' : 'عربي';
+    }
+  </script>
+
+</body>
+</html>

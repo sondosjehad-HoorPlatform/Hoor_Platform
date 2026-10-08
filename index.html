@@ -39,17 +39,7 @@
       transform: scale(1.06);
       box-shadow: 0 6px 20px rgba(212, 160, 23, 0.35);
     }
-  <section id="gallery">
-    <h2 id="galleryTitle">معرض الأعمال</h2>
-    <div class="gallery-grid">
-      <img src="photo1.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
-      <img src="photo2.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
-      <img src="photo3.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
-      <img src="photo4.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
-      <img src="photo6.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
-      <img src="photo7.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
-    </div>
-  </section>
+
     header {
       background: linear-gradient(180deg, #FFFDF8 0%, #FAF8F3 100%);
       padding: 80px 20px 70px;
@@ -204,6 +194,51 @@
       box-shadow: 0 10px 30px rgba(212, 160, 23, 0.3);
     }
 
+    /* ===== من إنجازاتنا ===== */
+    #achievements { text-align: center; max-width: 950px; }
+
+    .achievements-box {
+      background: linear-gradient(180deg, #FFFDF8 0%, #FAF8F3 100%);
+      border-radius: 25px;
+      padding: 50px 40px;
+      border: 2px solid #EFE6D0;
+      box-shadow: 0 8px 30px rgba(212, 160, 23, 0.1);
+      margin-top: 25px;
+    }
+
+    .achievements-number {
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: #D4A017;
+      line-height: 1;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 10px rgba(212, 160, 23, 0.2);
+    }
+
+    .achievements-subtitle {
+      font-size: 1.4rem;
+      color: #3D4F1F;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .achievements-line {
+      font-size: 1.15rem;
+      color: #666;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+
+    .achievements-quote {
+      font-size: 1.2rem;
+      color: #B8860B;
+      font-weight: 700;
+      font-style: italic;
+      border-top: 1px dashed #D4A017;
+      padding-top: 25px;
+      margin-top: 25px;
+    }
+
     /* ===== آراء المتدربين ===== */
     #testimonials { max-width: 1100px; }
 
@@ -213,7 +248,6 @@
       gap: 22px;
       margin-top: 30px;
     }
-
     .testimonial-card {
       background: #FFFFFF;
       border-radius: 18px;
@@ -224,7 +258,6 @@
       transition: all 0.35s ease;
       position: relative;
     }
-
     .testimonial-card::before {
       content: '"';
       position: absolute;
@@ -236,18 +269,15 @@
       line-height: 1;
       font-weight: bold;
     }
-
     html[dir="ltr"] .testimonial-card::before {
       left: auto;
       right: 20px;
     }
-
     .testimonial-card:hover {
       transform: translateY(-6px);
       border-color: #D4A017;
       box-shadow: 0 15px 40px rgba(212, 160, 23, 0.2);
     }
-
     .testimonial-text {
       font-size: 1.05rem;
       color: #555;
@@ -257,7 +287,6 @@
       z-index: 1;
       font-style: italic;
     }
-
     .testimonial-author {
       padding-top: 15px;
       border-top: 1px dashed #EFE6D0;
@@ -344,6 +373,150 @@
       color: #3D4F1F;
       transform: translateY(-3px) scale(1.03);
       box-shadow: 0 8px 25px rgba(212, 160, 23, 0.45);
+    }
+
+    /* ===== الورشات القادمة ===== */
+    #upcoming { max-width: 1100px; }
+
+    .upcoming-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .upcoming-card {
+      background: #FFFFFF;
+      border-radius: 18px;
+      padding: 30px 25px;
+      border: 2px solid #EFE6D0;
+      border-right: 5px solid #D4A017;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.35s ease;
+      text-align: center;
+    }
+    html[dir="ltr"] .upcoming-card {
+      border-right: 2px solid #EFE6D0;
+      border-left: 5px solid #D4A017;
+    }
+    .upcoming-card:hover {
+      transform: translateY(-6px);
+      border-color: #D4A017;
+      box-shadow: 0 15px 35px rgba(212, 160, 23, 0.2);
+      background: #FFFDF8;
+    }
+    .upcoming-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .upcoming-title {
+      font-size: 1.25rem;
+      color: #3D4F1F;
+      font-weight: 900;
+      line-height: 1.6;
+    }
+
+    /* ===== الفيديوهات ===== */
+    #videos { text-align: center; max-width: 950px; }
+
+    .videos-box {
+      background: linear-gradient(180deg, #FFFDF8 0%, #FAF8F3 100%);
+      border-radius: 25px;
+      padding: 50px 40px;
+      border: 2px solid #EFE6D0;
+      box-shadow: 0 8px 30px rgba(212, 160, 23, 0.1);
+      margin-top: 25px;
+    }
+
+    .videos-box p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .videos-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 40px;
+      border-radius: 35px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.15rem;
+      transition: all 0.3s ease;
+      font-family: 'Tajawal', inherit;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-btn.instagram {
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
+      color: #FFFFFF;
+    }
+    .video-btn.instagram:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 30px rgba(253, 29, 29, 0.4);
+    }
+
+    .video-btn.tiktok {
+      background: linear-gradient(135deg, #000000, #25F4EE);
+      color: #FFFFFF;
+    }
+    .video-btn.tiktok:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 30px rgba(37, 244, 238, 0.4);
+    }
+
+    /* ===== نطمح إلى ===== */
+    #aspire { text-align: center; max-width: 850px; }
+
+    .aspire-box {
+      background: linear-gradient(135deg, #3D4F1F 0%, #556B2F 100%);
+      border-radius: 25px;
+      padding: 55px 40px;
+      box-shadow: 0 15px 40px rgba(61, 79, 31, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .aspire-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #D4A017, transparent);
+    }
+
+    .aspire-box h2 {
+      color: #D4A017;
+      border-bottom: none;
+      padding-right: 0;
+      text-align: center;
+    }
+    .aspire-box h2::before { display: none; }
+
+    .aspire-text {
+      font-size: 1.25rem;
+      color: #FAF8F3;
+      line-height: 2.2;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    .aspire-heart {
+      display: block;
+      font-size: 2rem;
+      margin-top: 25px;
     }
 
     #support {
@@ -554,6 +727,10 @@
       #support { padding: 35px 25px; }
       .support-btn { padding: 14px 28px; font-size: 1rem; }
       .lang-btn { top: 15px; left: 15px; padding: 8px 18px; font-size: 0.85rem; }
+      .achievements-number { font-size: 3.5rem; }
+      .aspire-box { padding: 40px 25px; }
+      .aspire-text { font-size: 1.1rem; }
+      .video-btn { padding: 15px 30px; font-size: 1rem; }
     }
   </style>
 </head>
@@ -573,6 +750,18 @@
     </p>
   </header>
 
+  <section id="gallery">
+    <h2 id="galleryTitle">معرض الأعمال</h2>
+    <div class="gallery-grid">
+      <img src="photo1.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo2.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo3.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo4.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo6.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo7.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+    </div>
+  </section>
+
   <section>
     <h2 id="aboutTitle">من أنا</h2>
     <p id="aboutText">ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، ومصممة محترفة، مستشارة في التدريب، ومديرة ومؤسِّسة فرقة حور الفنية في غزة.</p>
@@ -588,7 +777,18 @@
       <li>🎪 إدارة الفرق الفنية والعروض</li>
       <li>🤖 الابتكار والذكاء الاصطناعي</li>
     </ul>
- 
+  </section>
+
+  <section id="achievements">
+    <h2 id="achievementsTitle">من إنجازاتنا 🏆</h2>
+    <div class="achievements-box">
+      <div class="achievements-number">+50</div>
+      <div class="achievements-subtitle" id="achSubtitle">إنجاز</div>
+      <div class="achievements-line" id="achLine">عروض • فعاليات • مشاركات</div>
+      <div class="achievements-quote" id="achQuote">رسم ابتسامات في عيون الأطفال 🌸<br>نسعى دائماً للزيادة في الدعم النفسي بكل حب</div>
+    </div>
+  </section>
+
   <section id="testimonials">
     <h2 id="testimonialsTitle">آراء المتدربين</h2>
     <div class="testimonials-grid">
@@ -697,6 +897,61 @@
 
   </section>
 
+  <section id="upcoming">
+    <h2 id="upcomingTitle">الورشات القادمة</h2>
+    <div class="upcoming-grid">
+
+      <div class="upcoming-card">
+        <span class="upcoming-icon">📋</span>
+        <div class="upcoming-title">ورشة إعداد منسق مشاريع</div>
+      </div>
+
+      <div class="upcoming-card">
+        <span class="upcoming-icon">🎓</span>
+        <div class="upcoming-title">ورشة إعداد مدرب معتمد</div>
+      </div>
+
+      <div class="upcoming-card">
+        <span class="upcoming-icon">🎨</span>
+        <div class="upcoming-title">ورشة التعافي بالفن</div>
+      </div>
+
+      <div class="upcoming-card">
+        <span class="upcoming-icon">🧭</span>
+        <div class="upcoming-title">ورشة فن إدارة الأزمات</div>
+      </div>
+
+      <div class="upcoming-card">
+        <span class="upcoming-icon">🕊️</span>
+        <div class="upcoming-title">ورشة فن العيش كراما</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2 id="videosTitle">تابعنا</h2>
+    <div class="videos-box">
+      <p id="videosIntro">شاهد أحدث أعمالنا وعروضنا وورشاتنا</p>
+      <div class="videos-buttons">
+        <a href="https://www.instagram.com/hoor_artistic_team" target="_blank" class="video-btn instagram" id="videoInstagram">
+          📸 انستغرام
+        </a>
+        <a href="https://www.tiktok.com/@hoor.artistic.team" target="_blank" class="video-btn tiktok" id="videoTiktok">
+          🎵 تيك توك
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="aspire">
+    <div class="aspire-box">
+      <h2 id="aspireTitle">نطمح إلى</h2>
+      <p class="aspire-text" id="aspireText">أن نكون في مقدمة صفوف الداعمين لأطفال غزة نفسياً، ورسم الضحكة على وجوههم، ورسم السعادة بالفن على وجوههم وقلوبهم.</p>
+      <span class="aspire-heart">🌸</span>
+    </div>
+  </section>
+
   <section id="support">
     <h2 id="supportTitle">ادعم منصة حور 🌸</h2>
     <p class="support-intro" id="supportIntro">منصة حور مشروع ثقافي-فني مستقل، بنسعى لتقديم ورشات وتدريبات فنية مجانية لأطفال وشباب غزة.</p>
@@ -772,14 +1027,25 @@
         title: 'منصة حور',
         tagline: 'حيث يلتقي الفن بالتدريب والإبداع',
         roles: '<span class="name">سندس جهاد</span> <span class="divider">—</span> كاتبة، مخرجة، مدربة<br>ومؤسِّسة فرقة حور الفنية',
+        galleryTitle: 'معرض الأعمال',
         aboutTitle: 'من أنا',
         aboutText: 'ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، ومصممة محترفة، مستشارة في التدريب، ومديرة ومؤسِّسة فرقة حور الفنية في غزة.',
         servicesTitle: 'خدماتي',
         services: ['🎭 ورشات مسرحية وتمثيل','🎤 تدريب إلقاء وخطابة','🎓 تدريب TOT (تدريب المدربين)','🧠 تنمية بشرية ومهارات حياتية','🎪 إدارة الفرق الفنية والعروض','🤖 الابتكار والذكاء الاصطناعي'],
-        galleryTitle: 'معرض الأعمال',
+        achievementsTitle: 'من إنجازاتنا 🏆',
+        achSubtitle: 'إنجاز',
+        achLine: 'عروض • فعاليات • مشاركات',
+        achQuote: 'رسم ابتسامات في عيون الأطفال 🌸<br>نسعى دائماً للزيادة في الدعم النفسي بكل حب',
         testimonialsTitle: 'آراء المتدربين',
         workshopsTitle: 'الورشات والتدريبات',
         register: '📝 سجل معنا',
+        upcomingTitle: 'الورشات القادمة',
+        videosTitle: 'تابعنا',
+        videosIntro: 'شاهد أحدث أعمالنا وعروضنا وورشاتنا',
+        videoInstagram: '📸 انستغرام',
+        videoTiktok: '🎵 تيك توك',
+        aspireTitle: 'نطمح إلى',
+        aspireText: 'أن نكون في مقدمة صفوف الداعمين لأطفال غزة نفسياً، ورسم الضحكة على وجوههم، ورسم السعادة بالفن على وجوههم وقلوبهم.',
         supportTitle: 'ادعم منصة حور 🌸',
         supportIntro: 'منصة حور مشروع ثقافي-فني مستقل، بنسعى لتقديم ورشات وتدريبات فنية مجانية لأطفال وشباب غزة.',
         supportItem1: '🎭 استمرار الورشات المجانية',
@@ -803,6 +1069,13 @@
           { title: '🧠 ورشة التنمية البشرية', desc: 'ورشات عملية في التواصل الفعال، إدارة الوقت، الثقة بالنفس، والعمل الجماعي. تهدف لتمكين المشاركين بحياتهم الشخصية والمهنية.', info: ['⏱️ 4 جلسات × ساعتين','👥 للجميع','🎯 صبايا، شباب (12+)'] },
           { title: '🎪 ورشة إدارة الفرق الفنية', desc: 'تدريب على إدارة الفرق الفنية، تنظيم العروض، بناء الفريق، والتخطيط الإبداعي. مناسبة للقائدات والمسؤولين الفنيين.', info: ['⏱️ 5 جلسات × ساعتين','👥 متوسط إلى متقدم','🎯 شباب، كبار (16+)'] },
           { title: '🤖 ورشة الابتكار والذكاء الاصطناعي', desc: 'ورشة عملية لتعلّم أساسيات الذكاء الاصطناعي، أدواته الحديثة، وكيفية استخدامه في الإبداع والتدريب والصناعات الفنية.', info: ['⏱️ 6 جلسات × ساعتين','👥 للمبتدئين','🎯 صبايا، شباب (14+)'] }
+        ],
+        upcoming: [
+          { icon: '📋', title: 'ورشة إعداد منسق مشاريع' },
+          { icon: '🎓', title: 'ورشة إعداد مدرب معتمد' },
+          { icon: '🎨', title: 'ورشة التعافي بالفن' },
+          { icon: '🧭', title: 'ورشة فن إدارة الأزمات' },
+          { icon: '🕊️', title: 'ورشة فن العيش كراما' }
         ]
       },
       en: {
@@ -811,14 +1084,25 @@
         title: 'Hoor Platform',
         tagline: 'Where Art Meets Training & Creativity',
         roles: '<span class="name">Sondos Jehad</span> <span class="divider">—</span> Writer, Director, Trainer<br>& Founder of Hoor Art Troupe',
+        galleryTitle: 'Gallery',
         aboutTitle: 'About Me',
         aboutText: 'Theatre, singing, and public speaking facilitator. TOT and human development trainer. Professional designer and training consultant. Founder & director of Hoor Art Troupe in Gaza.',
         servicesTitle: 'My Services',
         services: ['🎭 Theatre & Acting Workshops','🎤 Public Speaking & Elocution Training','🎓 TOT (Training of Trainers)','🧠 Human Development & Life Skills','🎪 Art Troupe & Performance Management','🤖 Innovation & Artificial Intelligence'],
-        galleryTitle: 'Gallery',
+        achievementsTitle: 'Our Achievements 🏆',
+        achSubtitle: 'Achievements',
+        achLine: 'Performances • Events • Participations',
+        achQuote: 'Drawing smiles in children\\'s eyes 🌸<br>Always striving to expand psychological support with love',
         testimonialsTitle: 'Testimonials',
         workshopsTitle: 'Workshops & Training',
         register: '📝 Register Now',
+        upcomingTitle: 'Upcoming Workshops',
+        videosTitle: 'Follow Us',
+        videosIntro: 'Watch our latest works, performances, and workshops',
+        videoInstagram: '📸 Instagram',
+        videoTiktok: '🎵 TikTok',
+        aspireTitle: 'We Aspire To',
+        aspireText: 'Be at the forefront of those supporting Gaza\\'s children psychologically — drawing smiles on their faces, and painting happiness through art on their faces and hearts.',
         supportTitle: 'Support Hoor Platform 🌸',
         supportIntro: 'Hoor Platform is an independent cultural-artistic project, aiming to provide free artistic workshops and training for children and youth in Gaza.',
         supportItem1: '🎭 Continuing free workshops',
@@ -842,6 +1126,13 @@
           { title: '🧠 Human Development Workshop', desc: 'Practical workshops on effective communication, time management, self-confidence, and teamwork. Aims to empower participants personally and professionally.', info: ['⏱️ 4 sessions × 2 hours','👥 All levels','🎯 Youth (12+)'] },
           { title: '🎪 Art Troupe Management', desc: 'Training on managing art troupes, organizing performances, team building, and creative planning. Suitable for leaders and art managers.', info: ['⏱️ 5 sessions × 2 hours','👥 Intermediate to Advanced','🎯 Youth (16+)'] },
           { title: '🤖 Innovation & AI Workshop', desc: 'A practical workshop to learn the basics of Artificial Intelligence, its modern tools, and how to use it in creativity, training, and artistic industries.', info: ['⏱️ 6 sessions × 2 hours','👥 Beginners','🎯 Youth (14+)'] }
+        ],
+        upcoming: [
+          { icon: '📋', title: 'Project Coordinator Preparation' },
+          { icon: '🎓', title: 'Certified Trainer Preparation' },
+          { icon: '🎨', title: 'Healing Through Art' },
+          { icon: '🧭', title: 'Crisis Management Art' },
+          { icon: '🕊️', title: 'Living with Dignity' }
         ]
       }
     };
@@ -860,6 +1151,7 @@
       document.getElementById('title').textContent = t.title;
       document.getElementById('tagline').textContent = t.tagline;
       document.getElementById('roles').innerHTML = t.roles;
+      document.getElementById('galleryTitle').textContent = t.galleryTitle;
       document.getElementById('aboutTitle').textContent = t.aboutTitle;
       document.getElementById('aboutText').textContent = t.aboutText;
       document.getElementById('servicesTitle').textContent = t.servicesTitle;
@@ -868,7 +1160,11 @@
         li.textContent = t.services[i];
       });
 
-      document.getElementById('galleryTitle').textContent = t.galleryTitle;
+      document.getElementById('achievementsTitle').textContent = t.achievementsTitle;
+      document.getElementById('achSubtitle').textContent = t.achSubtitle;
+      document.getElementById('achLine').textContent = t.achLine;
+      document.getElementById('achQuote').innerHTML = t.achQuote;
+
       document.getElementById('testimonialsTitle').textContent = t.testimonialsTitle;
       document.getElementById('workshopsTitle').textContent = t.workshopsTitle;
 
@@ -882,6 +1178,20 @@
       });
 
       document.querySelectorAll('[data-btn]').forEach(btn => btn.textContent = t.register);
+
+      document.getElementById('upcomingTitle').textContent = t.upcomingTitle;
+      document.querySelectorAll('.upcoming-card').forEach((card, i) => {
+        card.querySelector('.upcoming-icon').textContent = t.upcoming[i].icon;
+        card.querySelector('.upcoming-title').textContent = t.upcoming[i].title;
+      });
+
+      document.getElementById('videosTitle').textContent = t.videosTitle;
+      document.getElementById('videosIntro').textContent = t.videosIntro;
+      document.getElementById('videoInstagram').textContent = t.videoInstagram;
+      document.getElementById('videoTiktok').textContent = t.videoTiktok;
+
+      document.getElementById('aspireTitle').textContent = t.aspireTitle;
+      document.getElementById('aspireText').textContent = t.aspireText;
 
       document.getElementById('supportTitle').textContent = t.supportTitle;
       document.getElementById('supportIntro').textContent = t.supportIntro;

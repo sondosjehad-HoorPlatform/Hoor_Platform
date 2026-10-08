@@ -171,6 +171,33 @@
       border-right-color: #B8860B;
     }
 
+    /* ===== معرض الصور ===== */
+    #gallery { max-width: 1100px; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 3px solid #EFE6D0;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.03);
+      border-color: #D4A017;
+      box-shadow: 0 10px 30px rgba(212, 160, 23, 0.3);
+    }
+
     #workshops { max-width: 1100px; }
     .workshop-card {
       background: #FFFFFF;
@@ -456,6 +483,18 @@
     </ul>
   </section>
 
+  <section id="gallery">
+    <h2 id="galleryTitle">معرض الأعمال</h2>
+    <div class="gallery-grid">
+      <img src="photo1.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo2.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo3.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo4.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo6.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+      <img src="photo7.jpeg" alt="من أعمال فرقة حور" class="gallery-img">
+    </div>
+  </section>
+
   <section id="workshops">
     <h2 id="workshopsTitle">الورشات والتدريبات</h2>
 
@@ -600,6 +639,7 @@
         aboutText: 'ميسّرة مسرح وغناء وإلقاء وخطابة، مدربة TOT وتنمية بشرية، ومصممة محترفة، مستشارة في التدريب، ومديرة ومؤسِّسة فرقة حور الفنية في غزة.',
         servicesTitle: 'خدماتي',
         services: ['🎭 ورشات مسرحية وتمثيل','🎤 تدريب إلقاء وخطابة','🎓 تدريب TOT (تدريب المدربين)','🧠 تنمية بشرية ومهارات حياتية','🎪 إدارة الفرق الفنية والعروض','🤖 الابتكار والذكاء الاصطناعي'],
+        galleryTitle: 'معرض الأعمال',
         workshopsTitle: 'الورشات والتدريبات',
         register: '📝 سجل معنا',
         supportTitle: 'ادعم منصة حور 🌸',
@@ -634,6 +674,7 @@
         aboutText: 'Theatre, singing, and public speaking facilitator. TOT and human development trainer. Professional designer and training consultant. Founder & director of Hoor Art Troupe in Gaza.',
         servicesTitle: 'My Services',
         services: ['🎭 Theatre & Acting Workshops','🎤 Public Speaking & Elocution Training','🎓 TOT (Training of Trainers)','🧠 Human Development & Life Skills','🎪 Art Troupe & Performance Management','🤖 Innovation & Artificial Intelligence'],
+        galleryTitle: 'Gallery',
         workshopsTitle: 'Workshops & Training',
         register: '📝 Register Now',
         supportTitle: 'Support Hoor Platform 🌸',
@@ -682,6 +723,7 @@
         li.textContent = t.services[i];
       });
 
+      document.getElementById('galleryTitle').textContent = t.galleryTitle;
       document.getElementById('workshopsTitle').textContent = t.workshopsTitle;
 
       document.querySelectorAll('.workshop-card').forEach((card, i) => {

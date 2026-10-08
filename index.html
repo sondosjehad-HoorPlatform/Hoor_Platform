@@ -194,6 +194,68 @@
       box-shadow: 0 10px 30px rgba(212, 160, 23, 0.3);
     }
 
+    /* ===== آراء المتدربين ===== */
+    #testimonials { max-width: 1100px; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .testimonial-card {
+      background: #FFFFFF;
+      border-radius: 18px;
+      padding: 32px 28px 25px;
+      border: 1px solid #EFE6D0;
+      border-top: 5px solid #D4A017;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      transition: all 0.35s ease;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 4.5rem;
+      color: #F5EFE0;
+      font-family: Georgia, serif;
+      line-height: 1;
+      font-weight: bold;
+    }
+
+    html[dir="ltr"] .testimonial-card::before {
+      left: auto;
+      right: 20px;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      border-color: #D4A017;
+      box-shadow: 0 15px 40px rgba(212, 160, 23, 0.2);
+    }
+
+    .testimonial-text {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.9;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      padding-top: 15px;
+      border-top: 1px dashed #EFE6D0;
+      font-size: 0.95rem;
+      color: #B8860B;
+      font-weight: 700;
+    }
+
     #workshops { max-width: 1100px; }
     .workshop-card {
       background: #FFFFFF;
@@ -530,6 +592,43 @@
     </div>
   </section>
 
+  <section id="testimonials">
+    <h2 id="testimonialsTitle">آراء المتدربين</h2>
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">ورشة المسرح غيّرت طريقة تفكيري. تعلّمت كيف أعبّر عن نفسي بثقة، واكتشفت مواهب ما كنت أعرفها.</p>
+        <p class="testimonial-author">— ميار | متدربة في ورشة المسرح التفاعلي</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">ورشة الإلقاء علّمتني كيف أواجه الجمهور بدون خوف. اليوم أقدر أتكلّم بثقة في أي مكان.</p>
+        <p class="testimonial-author">— ليان | متدربة في ورشة الإلقاء والخطابة</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">تدريب TOT كان نقطة تحول في مسيرتي. الأدوات العملية والمنهجيات الحديثة ساعدتني أصبح مدربة أفضل.</p>
+        <p class="testimonial-author">— مجد | متدربة في تدريب TOT</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">التنمية البشرية ساعدتني أفهم نفسي أكثر، وأتعامل مع التحديات بطريقة إيجابية. شكراً منصة حور!</p>
+        <p class="testimonial-author">— أحمد | متدرب في ورشة التنمية البشرية</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">تجربة رائعة! الأجواء محفزة، والمدربة محترفة وصبورة. أنصح كل حد يجرب ورشات حور.</p>
+        <p class="testimonial-author">— أسامة | متدرب في ورشة إدارة الفرق الفنية</p>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">ورشة الذكاء الاصطناعي فتحت لي آفاق جديدة. تعلّمت أدوات ما كنت أعرف إنها موجودة!</p>
+        <p class="testimonial-author">— خليل | متدرب في ورشة الابتكار والذكاء الاصطناعي</p>
+      </div>
+
+    </div>
+  </section>
+
   <section id="workshops">
     <h2 id="workshopsTitle">الورشات والتدريبات</h2>
 
@@ -681,6 +780,7 @@
         servicesTitle: 'خدماتي',
         services: ['🎭 ورشات مسرحية وتمثيل','🎤 تدريب إلقاء وخطابة','🎓 تدريب TOT (تدريب المدربين)','🧠 تنمية بشرية ومهارات حياتية','🎪 إدارة الفرق الفنية والعروض','🤖 الابتكار والذكاء الاصطناعي'],
         galleryTitle: 'معرض الأعمال',
+        testimonialsTitle: 'آراء المتدربين',
         workshopsTitle: 'الورشات والتدريبات',
         register: '📝 سجل معنا',
         supportTitle: 'ادعم منصة حور 🌸',
@@ -719,6 +819,7 @@
         servicesTitle: 'My Services',
         services: ['🎭 Theatre & Acting Workshops','🎤 Public Speaking & Elocution Training','🎓 TOT (Training of Trainers)','🧠 Human Development & Life Skills','🎪 Art Troupe & Performance Management','🤖 Innovation & Artificial Intelligence'],
         galleryTitle: 'Gallery',
+        testimonialsTitle: 'Testimonials',
         workshopsTitle: 'Workshops & Training',
         register: '📝 Register Now',
         supportTitle: 'Support Hoor Platform 🌸',
@@ -771,6 +872,7 @@
       });
 
       document.getElementById('galleryTitle').textContent = t.galleryTitle;
+      document.getElementById('testimonialsTitle').textContent = t.testimonialsTitle;
       document.getElementById('workshopsTitle').textContent = t.workshopsTitle;
 
       document.querySelectorAll('.workshop-card').forEach((card, i) => {
